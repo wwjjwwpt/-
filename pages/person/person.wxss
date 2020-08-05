@@ -1,0 +1,86 @@
+/* pages/person/person.wxss */
+.container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  background-color: #F5F5F5
+}
+.head
+{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  height: 80rpx;
+  width: 100%;
+  background-color: white;
+}
+.thead{
+  margin-top: 20rpx;
+}
+.abform{
+  width: 750rpx;
+  height:210rpx;
+  margin-bottom: 40rpx;
+  background-color: white;
+  border-style:6px solid #F5F5F5;  
+}
+.ab1{
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+  background-color: white;
+  padding-top: 20px;
+}
+.name{
+  display: flex;
+  flex-direction: column;
+  line-height: 50rpx;
+  width: 280rpx;
+  height:210rpx;
+  margin-top: 60rpx;
+  margin-left: 50rpx;
+  font-size: 30rpx;
+}
+.float{
+  float: left;
+}
+.listimage{
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+.ab2{
+  display: inline-block;
+  width: 20px;
+  margin-right:5px; 
+}
+.ab2 image{
+  width: 100%;
+  height: 20px;
+  vertical-align: -2px;
+}
+.ab3{
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: black;
+}
+.text1{
+  width: 350rpx;
+}
+.content{
+  margin-left: 40rpx;
+}
+.quit{
+  width: 80%;
+  margin-top: 200rpx;
+  background-color: #e98f36;
+  color: white;
+  border-radius: 98rpx; 
+}

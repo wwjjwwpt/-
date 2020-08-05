@@ -1,0 +1,62 @@
+page{
+  background-color: #F5F5F5
+}
+.pcontainer{
+  display: flex;/* 如果把盒子设置为弹性盒子,必须要加的 */
+  flex-direction: column;/* 设置一个大盒子内容垂直排列*/
+  align-items: center;/* 设置一个大盒子内容居中排列*/
+}
+.maphead{
+  width: 750rpx;
+  margin-bottom: 40rpx;
+}
+.List{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  background-color: white;
+  height:60rpx;
+  width: 100%;
+  border-bottom: 1px solid #F5F5F5;
+}
+.listimg{
+  margin-left: 100rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.adlistimg{
+  margin-left: 260rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.textkey{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.textval{
+    margin-left: 120rpx;
+    color: #707070
+  }
+.sexval{
+  margin-left: 170rpx;
+  color: #707070;
+}
+section
+{
+      font-size:28rpx;
+      margin-left: 50rpx;
+      margin-top: 30rpx;
+}
+.on{display: block}
+.off{display: none}
+.bselect{
+  border: none;
+}
+.btn1 {
+  width: 80%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx; 
+  background-color: #e98f36;
+  color: white;
+  border-radius: 98rpx; 
+}

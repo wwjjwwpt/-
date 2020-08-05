@@ -1,0 +1,59 @@
+<view class="pcontainer">
+  <map class ='maphead' longitude='{{longitudes}}' latitude='{{latitudes}}' markers='{{markers}}' scale='14'show-location style="height: 400rpx;">
+  </map>
+  
+<view class="List">
+  <image class="listimg" src="/images/select.jpg"></image>
+          <view class="textkey">性别</view>
+           <view class="sexval">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+            </label>
+          </radio-group>
+            </view>
+        </view>
+<block wx:for="{{plist}}" wx:for-index='key' wx:key = 'item'>
+  <view class = "List">
+    <image class="listimg" src="/images/select.jpg"></image>
+    <view class="textkey" >{{item.name}}</view>
+    <picker bindchange="bindCasPickerChangelist" value="{{item.sportIndex}}" value1="{{key}}" range="{{item.sportArray}}" data-src ="{{key}}">
+      <view>
+          <text class="textval">{{item.sportArray[item.sportIndex]}}</text>
+      </view>
+    </picker>
+  </view>
+</block>
+<view class = "List">
+    <image class="listimg" src="/images/select.jpg"></image>
+    <view class="textkey" >运动日期</view>
+     <picker mode="date" value="{{date}}" start="2020-01-01" end="2025-1-01" bindchange="bindDateChange">  
+    <view class="textval">  
+     {{dates}}
+    </view>  
+  </picker>
+  </view>
+<view class = "List">
+    <image class="listimg" src="/images/select.jpg"></image>
+    <view class="textkey" >运动时间</view>
+     <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+    <view class="textval">  
+     {{times}}
+    </view>  
+  </picker>
+  </view>
+<view class="List">
+  <image class="adlistimg" src="/images/select.jpg"></image>
+          <view class="textkey .address">地址选择</view>
+  </view>
+<button  style="width:750rpx;font-size: 30rpx; background:white !important;"  bindtap='map'>{{address}}</button>
+
+
+<button class='btn1'  bindtap="bindupset">
+    <view>确定</view>
+ </button>
+
+<!-- <view class="section {{reply?'on':'off'}}">
+       <input name="other" placeholder="请输入所预约项目" type="text"/>
+    </view> -->
+</view>

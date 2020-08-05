@@ -1,0 +1,19 @@
+<!--pages/person/person.wxml-->
+<div class="head">
+    <text class="thead">个人信息</text>
+</div>
+<div>
+  <block wx:for="{{userListInfo}}" wx:key="item">
+    <div class="ab1">
+    <div class="ab2">
+      <image src="{{item.icon}}"></image>
+    </div>
+    <div class="ab3">
+      <div class='text1'><text>{{item.text}}</text></div>
+      <div class='content'>{{item.content}}</div>
+    </div>
+    <div class="listimage"></div>
+    </div>
+  </block>
+<button class='quit' bindtap="change">修改资料</button>
+</div>

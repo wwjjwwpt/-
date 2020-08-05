@@ -1,0 +1,27 @@
+<!--pages/about/about.wxml-->
+<view>
+  <div class="abform float">
+    <div class="head float">
+      <open-data type='userAvatarUrl'> </open-data>
+    </div>
+    <div class="name float">
+      <open-data type='userNickName'></open-data>
+      <div>
+      <text style="font-size: 28rpx;">称号:</text>
+      <text style="font-size:28rpx;">运动小白</text>
+      </div>
+    </div>
+  </div>
+  <block wx:for="{{userListInfo}}" wx:key="item">
+    <div class="ab1" bindtap="createorder" data-item="{{item}}">
+    <div class="ab2">
+      <image src="{{item.icon}}"></image>
+    </div>
+    <div class="ab3">
+      <div>{{item.text}}</div>
+    </div>
+    <div class="listimage"></div>
+    </div>
+  </block>
+</view>
+

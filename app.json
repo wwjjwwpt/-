@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/pipei/pipei",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/pdetail/pdetail",
+    "pages/person/person",
+    "pages/change/change"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4D4D4D",
+    "navigationBarTitleText": "今天也要运动鸭",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "热门",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/hot.jpg",
+        "selectedIconPath": "images/hot1.jpg"
+      },
+      {
+        "text": "匹配",
+        "pagePath": "pages/pipei/pipei",
+        "iconPath": "images/pp.jpg",
+        "selectedIconPath": "images/pp1.jpg"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/about/about",
+        "iconPath": "images/about1.jpg",
+        "selectedIconPath": "images/about.jpg"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#e98f36"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

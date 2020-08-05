@@ -1,0 +1,145 @@
+.maphead{
+  background-color: #F4F4;
+  width: 750rpx;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  background-color: Azure;
+  width: 100%;
+  height: 300rpx;
+}
+.info1{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  background-color: Azure;
+  width: 80%;
+  height: 150rpx;
+  border-bottom: solid 2rpx black;
+}
+.info2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  background-color: Azure;
+  width: 80%;
+  height: 350rpx;
+  border-bottom: solid 2rpx black;
+}
+.col-1{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+.textit{
+  margin-top: 22rpx
+}
+.it{
+  margin-left: 100rpx
+}
+.it1{
+  margin-left: 10rpx
+}
+.adrees{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: Azure;
+  height: 150rpx;
+  margin-top: 20rpx;
+}
+
+.ad{
+  margin-top: 20rpx
+}
+.plistconhead{
+   width: 700rpx;
+   background-color: white;
+   display: flex;
+   margin-top: 10rpx;
+   border-bottom: 1px solid gray;
+   border-radius: 30rpx;
+   flex-direction: column;
+   align-items: center;
+}
+.discuss{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+.name{
+  margin-top: 10rpx;
+  margin-left: 15rpx
+}
+.maohao{
+  margin-top: 10rpx;
+}
+.context{
+  margin-left: 100rpx;
+}
+.condate{
+  margin-left: 200rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+.contime{
+  margin-left: 30rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+.contip{
+  margin-top: 50rpx;
+}
+.pocket_input {
+
+position: fixed;
+
+bottom: 0;
+
+width: 100%;
+
+background-color: white;
+
+overflow: hidden,
+
+}
+
+.input_style{
+
+margin: 12rpx 23rpx;
+
+background-color: #F4F5F6;
+
+font-size: 30rpx;
+
+border-radius: 20rpx;
+
+padding-left: 15rpx;
+
+}
+.input-placeholder{
+
+margin-left: 25rpx;
+
+}
+.down{
+  height: 200rpx;
+}
+.quit{
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: red;
+  color: white;
+  border-radius: 98rpx; 
+}
+

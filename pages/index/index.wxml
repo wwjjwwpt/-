@@ -1,0 +1,68 @@
+<view >
+  <image class="background" src="/images/head.jpg" mode="aspectFill"></image>
+  <view class="imghead">
+    <text class = "headtext">快来寻找你的运动伙伴吧</text>
+  </view>
+  <view class="weather-wrapper">
+  <view class="location-text">{{location_text}}</view>
+  <view class="temp">{{temperature}}</view>
+  <view class="weather">
+    <text class="weather_txt">{{now_weather}}</text>
+    <text class="air_label">空气{{now_air}}</text>
+  </view>
+  <view class="day-weather">
+    <view class="day-text">{{today}}</view>
+    <view class="temp-text">{{today_weather}}</view>
+  </view>
+</view>
+    <view class="headcontainer">
+      <view class='plistconhead'>
+        <text class="Htext">匹配运动中</text>
+      </view>
+    <block wx:if ="{{resultflag}}">
+    <block wx:for="{{result}}" wx:for-index='key' wx:key = 'item'>
+      <view class="list" bindtap="pdirtodet" data-item="{{item}}">
+        <view class="clo-1">
+          <text class="sport">{{sportArray[item.fields.P_sport]}}</text>
+          <view>
+          <text class="num">人数:</text>
+          <text>{{item.fields.P_hasnum}}</text>
+          <text>/</text>
+          <text>{{numArray[item.fields.P_number]}}</text>
+        </view>
+        </view>
+        <view class="clo-1">
+          <text class="level">{{item.fields.P_times}}</text>
+          <text class="data">{{item.fields.P_date}}</text>
+        </view>
+      </view>
+      </block>
+      </block>
+      <block wx:else>
+      <view class="list" bindtap="createorder">
+        <text class="tip">点击创建你的运动吧</text>
+        </view>
+      </block>
+    </view>
+    <block wx:if = "{{resultflag1}}">
+      <view class="headcontainer">
+        <view class='plistconhead'>
+          <text class="Htext">成功匹配</text>
+        </view>
+      <block wx:for="{{result1}}" wx:for-index='key' wx:key = 'item'>
+      <view class="list" bindtap="dirtodet" data-item="{{item}}">
+        <view class="clo-1">
+          <text class="sport">{{sportArray[item.fields.P_sport]}}</text>
+          <view>
+          <text class="time">{{item.fields.P_times}}</text>
+        </view>
+        </view>
+        <view class="clo-1">
+          <text class="level">{{levelArray[item.fields.P_level]}}</text>
+          <text class="data">{{item.fields.P_date}}</text>
+        </view>
+      </view>
+      </block>
+      </view>
+    </block>
+</view>

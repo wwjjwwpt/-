@@ -1,0 +1,55 @@
+<view>
+<map class ='maphead' longitude='{{elist.P_longitudes}}' latitude='{{elist.P_latitudes}}' markers='{{markers}}' scale='14'show-location style="height: 400rpx;">
+</map>
+<view class="adrees">
+<text class="ad">地点:</text>
+<text>{{elist.P_address}}</text>
+</view> 
+<view class="info">
+  <view class="col-1">
+  <view class="textit"><text class="it">运动：</text><text>{{sportArray[elist.P_sport]}}</text></view>
+  <view class="textit"><text class="it">水平：</text><text>{{levelArray[elist.P_level]}}</text></view>
+  <view class="textit"><text class="it">人数：</text><text>1</text><text>/</text><text>{{numArray[elist.P_number]}}</text></view>
+  <view class="textit"><text class="it">性别：</text><text>{{genderArray[elist.P_pgender]}}</text></view>
+  </view>
+  <view class="col-1">
+  <view class="textit"><text class="it1">时间：</text><text>{{elist.P_times}}</text></view>
+  <view class="textit"><text class="it1">日期：</text><text>{{elist.P_date}}</text></view>
+  <view class="textit"><text class="it1">时长：</text><text>2h</text></view>
+  <view class="textit"><text class="it1">发起时间:</text><text>{{date[0]}}</text>
+  </view>
+  </view>
+</view>
+
+<view class="discuss">
+<button class='quit' bindtap="binddelete">退出</button>
+  <view class='plistconhead'>
+        <text class="Htext">留言</text>
+  </view>
+  <view class="content">
+    <block wx:if="{{resultflag}}">
+    <block wx:for="{{result}}" wx:for-index='key' wx:key = 'item'>
+    <view class="info1">
+    <view class="">
+    <text class="name">{{item.fields.P_username}}</text>
+    <text class="maohao">:</text>
+    </view>
+    <view><text class="context">{{item.fields.C_content}}</text></view>
+    <view>
+    <text class="condate">{{item.fields.C_createdatetime}}</text>
+    <text class="contime">{{item.time}}</text></view>
+    </view>
+    </block>
+    <view class="down"></view>
+    </block>
+    <block wx:else>
+      <view class="info2">
+    <text class="contip">快发表你的评论吧</text>
+    </view>
+    </block>
+  </view>
+</view>
+</view>
+<view class='pocket_input' style='bottom:{{height}}px;'  >
+<input type='text'  placeholder-style='input-placeholder' cursor='{{cursor_position}}' class='input_style' placeholder='随便说点什么吧~(30字以内哦)' focus='{{focus}}' cursor-spacing="2" adjust-position='{{adjust_position}}' maxlength='30' bindfocus="bindfocus" bindblur="bindblur" bindconfirm="bindconfirm" bindinput="contentInput"></input><button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">提交</button>
+</view>
